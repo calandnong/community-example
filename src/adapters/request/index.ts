@@ -17,7 +17,7 @@ export interface CommonResponse {
 const instance = new HttpRequest(new XHRAdapter<CommonResponse>());
 
 instance.setDefaultConfig({
-  baseURL: 'http://www.example.com',
+  baseURL: import.meta.env.APP_API_BASE_URL,
   config: {
     header: {
       'Content-Type': 'application/json;charset=UTF-8',
